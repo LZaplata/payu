@@ -1,6 +1,6 @@
 {
     "name": "lzaplata/payu",
-    "description": "PayU wrapper pro Nette Framework.",
+    "description": "PayU wrapper for Nette Framework.",
     "keywords": ["nette", "payu"],
     "homepage": "https://github.com/LZaplata/payu",
     "license": "New BSD",
