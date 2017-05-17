@@ -48,14 +48,14 @@ In first step you must create order instantion.
 $order = $this->payu->createOrder([
         "description" => $description,          
         "currencyCode" => $currency,            
-        "totalAmount" => $price,                // order price
-        "extOrderId" => $id,                    // eshop unique id
-        "notifyUrl" => $notifyUrl,              // url form sending notifications from PayU  
-        "continueUrl" => $continueUrl,          // url to redirect after successful payment     
+        "totalAmount" => $price,                    // order price in lowest currency unit (1 CZK = 100)
+        "extOrderId" => $id,                        // eshop unique id
+        "notifyUrl" => $notifyUrl,                  // url form sending notifications from PayU  
+        "continueUrl" => $continueUrl,              // url to redirect after successful payment     
         "products" => [
                 0 => [
                         "name" => $productName,
-                        "unitPrice" => $unitPrice,
+                        "unitPrice" => $unitPrice,  // product price in lowest currency unit (1 CZK = 1000)
                         "quantity" => $quantity
                 ]
         ],
