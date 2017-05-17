@@ -1,0 +1,23 @@
+{
+    "name": "lzaplata/payu",
+    "description": "PayU wrapper pro Nette Framework.",
+    "keywords": ["nette", "payu"],
+    "homepage": "https://github.com/LZaplata/payu",
+    "license": "New BSD",
+    "authors": [
+        {
+            "name": "Lukáš Záplata",
+            "email": "lukas.zaplata@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4",
+        "openpayu/openpayu": "2.2.*",
+        "nette/di": "~2.3",
+        "nette/application": "~2.3",
+        "nette/utils": "~2.3"
+    },
+    "autoload": {
+        "classmap": ["src/"]
+    }
+}
