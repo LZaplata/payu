@@ -1,7 +1,7 @@
-#PayU
+# PayU
 This is small Nette Framework wrapper for PayU gateway.
 
-##Installation
+## Installation
 The easiest way to install library is via Composer.
 
 ````sh
@@ -41,7 +41,7 @@ use LZaplata\PayU\Service;
 /** @var Service @inject */
 public $payu;
 ````
-##Usage
+## Usage
 In first step you must create order instantion.
 
 ````php
