@@ -30,7 +30,7 @@ payu:
         posAuthKey  : *
         key1        : *
         key2        : *
-        sandbox     : *
+        sandbox     : true
 ````
 
 ...and autowire library to presenter
