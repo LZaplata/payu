@@ -55,7 +55,7 @@ $order = $this->payu->createOrder([
         "products" => [
                 0 => [
                         "name" => $productName,
-                        "unitPrice" => $unitPrice,  // product price in lowest currency unit (1 CZK = 1000)
+                        "unitPrice" => $unitPrice,  // product price in lowest currency unit (1 CZK = 100)
                         "quantity" => $quantity
                 ]
         ],
