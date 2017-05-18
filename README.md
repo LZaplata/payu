@@ -26,11 +26,11 @@ Now you can set parameters...
 
 ````neon
 payu:
-        posId       : *
-        posAuthKey  : *
-        key1        : *
-        key2        : *
-        sandbox     : true
+        posId           : *
+        clientId        : *
+        clientSecret    : *
+        key2            : *
+        sandbox         : true
 ````
 
 ...and autowire library to presenter
