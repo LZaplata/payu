@@ -20,6 +20,6 @@ class Extension extends CompilerExtension
         $builder = $this->getContainerBuilder();
 
         $builder->addDefinition($this->prefix("config"))
-            ->setClass("LZaplata\PayU\Service", [$config["posId"], $config["posAuthKey"], $config["sandbox"], $config["key1"], $config["key2"]]);
+            ->setClass("LZaplata\PayU\Service", [$config["posId"], $config["clientId"], $config["sandbox"], $config["clientSecret"], $config["key2"]]);
     }
 }

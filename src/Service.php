@@ -18,13 +18,13 @@ class Service extends Object
     public $posId;
 
     /** @var  string */
-    public $posAuthKey;
+    public $clientId;
 
     /** @var  bool */
     public $sandbox;
 
     /** @var  string */
-    public $key1;
+    public $clientSecret;
 
     /** @var  string */
     public $key2;
@@ -33,18 +33,18 @@ class Service extends Object
      * Service constructor.
      *
      * @param int $posId
-     * @param string $posAuthKey
+     * @param string $clientId
      * @param bool $sandbox
-     * @param string $key1
+     * @param string $clientSecret
      * @param string $key2
      */
-    public function __construct($posId, $posAuthKey, $sandbox, $key1, $key2)
+    public function __construct($posId, $clientId, $sandbox, $clientSecret, $key2)
     {
         $this->setSandbox($sandbox);
         $this->setPosId($posId);
+        $this->setClientId($clientId);
         $this->setSecondKey($key2);
-        $this->setFirstKey($key1);
-        $this->setPosAuthKey($posAuthKey);
+        $this->setClientSecret($clientSecret);
     }
 
     /**
@@ -58,20 +58,21 @@ class Service extends Object
         $this->posId = $id;
 
         \OpenPayU_Configuration::setMerchantPosId($id);
-        \OpenPayU_Configuration::setOauthClientId($id);
 
         return $this;
     }
 
     /**
-     * Sets authorization POS key
+     * Sets PayU client ID
      *
-     * @param string $key
-     * @return $this
+     * @param int $id
+     * @return self
      */
-    public function setPosAuthKey($key)
+    public function setClientId($id)
     {
-        $this->posAuthKey = $key;
+        $this->clientId = $id;
+
+        \OpenPayU_Configuration::setOauthClientId($id);
 
         return $this;
     }
@@ -92,14 +93,14 @@ class Service extends Object
     }
 
     /**
-     * Sets first key (MD5)
+     * Sets client secret key
      *
      * @param string $key
      * @return self
      */
-    public function setFirstKey($key)
+    public function setClientSecret($key)
     {
-        $this->key1 = $key;
+        $this->clientSecret = $key;
 
         \OpenPayU_Configuration::setOauthClientSecret($key);
 
