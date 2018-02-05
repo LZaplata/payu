@@ -3,7 +3,6 @@
     "description": "PayU wrapper for Nette Framework.",
     "keywords": ["nette", "payu"],
     "homepage": "https://github.com/LZaplata/payu",
-    "license": "New BSD",
     "authors": [
         {
             "name": "Lukáš Záplata",
